@@ -6,9 +6,6 @@ spring:
         searchQ:
           destination: searchQ
           group: searchQGroup
-        checkInQ:
-          destination: checkInQ
-          group: checkInQGroup
   datasource:
     url: jdbc:mysql://localhost:3306/brownfield-booking-service?useSSL=false
     username: root
@@ -27,3 +24,5 @@ spring:
     password: guest
   redis:
     host: localhost
+originairports:
+  shutdown: SEA
