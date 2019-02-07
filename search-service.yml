@@ -6,7 +6,7 @@ spring:
           destination: searchQ
           group: searchQGroup
   datasource:
-    url: jdbc:mysql://localhost:3306/brownfield-booking-service?useSSL=false
+    url: jdbc:mysql://localhost:3306/brownfield-search-service?useSSL=false
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
