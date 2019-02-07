@@ -1,4 +1,13 @@
 spring:
+  cloud:
+    stream:
+      bindings:
+        searchQ:
+          destination: searchQ
+          group: searchQGroup
+        checkInQ:
+          destination: checkInQ
+          group: checkInQGroup
   datasource:
     url: jdbc:mysql://localhost:3306/brownfield-booking-service?useSSL=false
     username: root
@@ -10,18 +19,10 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-      stream:
-      bindings:
-        searchQ:
-          destination: searchQ
-          group: searchQGroup
-        checkInQ:
-          destination: checkInQ
-          group: checkInQGroup
   rabbitmq:
     host: localhost
     port: 5672
     username: guest
     password: guest
   redis:
-    host: localhost
+    host: localhost  
