@@ -2,9 +2,6 @@ spring:
   cloud:
     stream:
       bindings:
-        searchQ:
-          destination: searchQ
-          group: searchQGroup
         checkInQ:
           destination: checkInQ
           group: checkInQGroup
