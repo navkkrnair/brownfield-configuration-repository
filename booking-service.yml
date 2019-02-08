@@ -30,4 +30,5 @@ spring:
     store-type: redis
 fare-service:
   ribbon:
-    listOfServers: localhost:8080    
+    listOfServers: localhost:8080
+  url: ${FARE_SERVICE}
