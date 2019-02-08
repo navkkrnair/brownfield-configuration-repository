@@ -20,11 +20,11 @@ zuul:
       sensitive-headers: 
     search-service:
       path: /search-service/**
-      url: http://localhost:8060/
+      url: http://localhost:8090/
       sensitive-headers: 
     booking-service:
       path: /booking-service/**
-      url: http://localhost:8090/
+      url: http://localhost:8060/
       sensitive-headers: 
     ui-service:
       path: /ui-service/**
