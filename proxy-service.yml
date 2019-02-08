@@ -11,8 +11,8 @@ spring:
 zuul:
   routes:
     fare-service:
-      path: /${FARE_SERVICE}/**
-      url: http://${FARE_SERVICE}:8080/
+      path: /fare-service/**
+      url: http://localhost:8080/
       sensitive-headers:
       - 
     checkin-service:
@@ -31,7 +31,7 @@ zuul:
       sensitive-headers:
       - 
     ui-service:
-      path: /${UI_SERVICE}/**
-      url: http://${UI_SERVICE}:8080/
+      path: /ui-service/**
+      url: http://localhost:8001/
       sensitive-headers:
       -     
