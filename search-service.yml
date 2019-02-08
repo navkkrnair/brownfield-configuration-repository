@@ -23,7 +23,5 @@ spring:
     password: guest
   redis:
     host: localhost
-  session:
-    store-type: redis
 originairports:
   shutdown: SEA
