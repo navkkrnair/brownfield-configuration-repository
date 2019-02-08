@@ -1,3 +1,5 @@
 spring:
   redis:
     host: localhost
+  session:
+    store-type: redis
