@@ -16,18 +16,18 @@ zuul:
       sensitive-headers:
       - 
     checkin-service:
-      path: /${CHECKIN_SERVICE}/**
-      url: http://${CHECKIN_SERVICE}:8080/
+      path: /checkin-service/**
+      url: http://localhost:8070/
       sensitive-headers:
       - 
     search-service:
-      path: /${SEARCH_SERVICE}/**
-      url: http://${SEARCH_SERVICE}:8080/
+      path: /search-service/**
+      url: http://localhost:8060/
       sensitive-headers:
       - 
     booking-service:
-      path: /${BOOKING_SERVICE}/**
-      url: http://${BOOKING_SERVICE}:8080/
+      path: /booking-service/**
+      url: http://localhost:8090/
       sensitive-headers:
       - 
     ui-service:
