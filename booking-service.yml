@@ -28,3 +28,6 @@ spring:
     host: localhost  
   session:
     store-type: redis
+fare-service:
+  ribbon:
+    listOfServers: localhost:8080    
