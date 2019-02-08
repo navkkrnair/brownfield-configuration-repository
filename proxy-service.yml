@@ -1,0 +1,37 @@
+info:
+  app:
+    name: Spring Boot Zuul Proxy System
+    description: This application is a reverse proxy
+    version: 1.0
+spring:
+  redis:
+    host: localhost
+  session:
+    store-type: redis
+zuul:
+  routes:
+    fare-service:
+      path: /${FARE_SERVICE}/**
+      url: http://${FARE_SERVICE}:8080/
+      sensitive-headers:
+      - 
+    checkin-service:
+      path: /${CHECKIN_SERVICE}/**
+      url: http://${CHECKIN_SERVICE}:8080/
+      sensitive-headers:
+      - 
+    search-service:
+      path: /${SEARCH_SERVICE}/**
+      url: http://${SEARCH_SERVICE}:8080/
+      sensitive-headers:
+      - 
+    booking-service:
+      path: /${BOOKING_SERVICE}/**
+      url: http://${BOOKING_SERVICE}:8080/
+      sensitive-headers:
+      - 
+    ui-service:
+      path: /${UI_SERVICE}/**
+      url: http://${UI_SERVICE}:8080/
+      sensitive-headers:
+      -     
