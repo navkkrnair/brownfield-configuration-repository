@@ -43,7 +43,7 @@ spring:
           destination: checkInQ
           group: checkInQGroup
   datasource:
-    url: jdbc:mysql://${MYSQL_SERVER}/brownfield-checkin-service?useSSL=false
+    url: jdbc:mysql://mysql-server/brownfield-checkin-service?useSSL=false
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
