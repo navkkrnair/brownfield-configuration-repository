@@ -25,3 +25,7 @@ spring:
     host: localhost
 originairports:
   shutdown: SEA
+logging:
+  level:
+    root: info
+    org.springframework.security: debug  
