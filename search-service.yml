@@ -1,4 +1,5 @@
 spring:
+  profiles: development
   cloud:
     stream:
       bindings:
@@ -28,4 +29,39 @@ originairports:
 logging:
   level:
     root: info
-    org.springframework.security: debug  
+    org.springframework.security: debug
+    
+---
+
+spring:
+  profiles: production
+  cloud:
+    stream:
+      bindings:
+        searchQ:
+          destination: searchQ
+          group: searchQGroup
+  datasource:
+    url: jdbc:mysql://mysql-server/brownfield-search-service?useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    tomcat:
+      validation-query: SELECT 1
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: guest
+    password: guest
+  redis:
+    host: redis
+originairports:
+  shutdown: SEA
+logging:
+  level:
+    root: info
+    org.springframework.security: info
