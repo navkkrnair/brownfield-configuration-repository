@@ -73,3 +73,7 @@ spring:
 fare-service:
   ribbon:
     listOfServers: ${FARE_SERVICE}
+logging:
+  level:
+    root: info
+    org.springframework.security: info    
