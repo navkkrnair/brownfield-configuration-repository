@@ -72,7 +72,7 @@ spring:
     store-type: redis
 fare-service:
   ribbon:
-    listOfServers: ${FARE_SERVICE}
+    listOfServers: fare-service
 logging:
   level:
     root: info
