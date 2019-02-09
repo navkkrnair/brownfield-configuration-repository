@@ -25,3 +25,7 @@ spring:
     host: localhost
   session:
     store-type: redis
+logging:
+  level:
+    root: info
+    org.springframework.security: debug    
