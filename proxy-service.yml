@@ -1,9 +1,5 @@
-info:
-  app:
-    name: Spring Boot Zuul Proxy System
-    description: This application is a reverse proxy
-    version: 1.0
 spring:
+  profiles: development
   redis:
     host: localhost
   session:
@@ -33,4 +29,46 @@ zuul:
 logging:
   level:
     root: info
-    org.springframework.security: debug      
+    org.springframework.security: debug
+info:
+  app:
+    name: Spring Boot Zuul Proxy System
+    description: This application is a reverse proxy
+    version: 1.0    
+    
+    
+---
+
+spring:
+  profiles: production
+  redis:
+    host: redis
+  session:
+    store-type: redis
+zuul:
+  routes:
+    fare-service:
+      path: /fare-service/**
+       sensitive-headers: 
+    checkin-service:
+      path: /checkin-service/**
+      sensitive-headers: 
+    search-service:
+      path: /search-service/**
+      sensitive-headers: 
+    booking-service:
+      path: /booking-service/**
+      url: http://localhost:8060/
+      sensitive-headers: 
+    ui-service:
+      path: /ui-service/**
+      sensitive-headers:
+logging:
+  level:
+    root: info
+    org.springframework.security: info
+info:
+  app:
+    name: Spring Boot Zuul Proxy Production System
+    description: This application is a reverse proxy
+    version: 1.0    
