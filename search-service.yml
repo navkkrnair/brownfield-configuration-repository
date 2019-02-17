@@ -45,7 +45,7 @@ spring:
     url: jdbc:mysql://${MYSQL_SERVER}/brownfield-search-service?useSSL=false
     username: root
     password: root
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     tomcat:
       validation-query: SELECT 1
   jpa:
