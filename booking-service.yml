@@ -13,7 +13,7 @@ spring:
     url: jdbc:mysql://localhost:3306/brownfield-booking-service?useSSL=false
     username: root
     password: root
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     tomcat:
       validation-query: SELECT 1
   jpa:
@@ -51,23 +51,23 @@ spring:
           destination: checkInQ
           group: checkInQGroup
   datasource:
-    url: jdbc:mysql://mysql-server/brownfield-booking-service?useSSL=false
+    url: jdbc:mysql://${MYSQL_SERVER}/brownfield-booking-service?useSSL=false
     username: root
     password: root
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     tomcat:
       validation-query: SELECT 1
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     show-sql: false
   rabbitmq:
-    host: rabbitmq
+    host: ${RABBITMQ_SERVER}
     port: 5672
     username: guest
     password: guest
   redis:
-    host: redis  
+    host: ${REDIS_MASTER}  
   session:
     store-type: redis
 fare-service:
