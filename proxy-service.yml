@@ -42,7 +42,7 @@ info:
 spring:
   profiles: production
   redis:
-    host: redis
+    host: ${REDIS_MASTER}
   session:
     store-type: redis
 zuul:
