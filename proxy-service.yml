@@ -49,23 +49,23 @@ zuul:
   routes:
     fare-service:
       path: /fare-service/**
-      url: http://fare-service/
+      url: http://fare-service:8080/
       sensitive-headers: 
     checkin-service:
       path: /checkin-service/**
-      url: http://checkin-service/
+      url: http://checkin-service:8080/
       sensitive-headers: 
     search-service:
       path: /search-service/**
-      url: http://search-service/
+      url: http://search-service:8080/
       sensitive-headers: 
     booking-service:
       path: /booking-service/**
-      url: http://booking-service/
+      url: http://booking-service:8080/
       sensitive-headers: 
     ui-service:
       path: /ui-service/**
-      url: http://ui-service/
+      url: http://ui-service:8080/
       sensitive-headers:
 logging:
   level:
