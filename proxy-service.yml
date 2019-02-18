@@ -49,7 +49,7 @@ zuul:
   routes:
     fare-service:
       path: /fare-service/**
-      url: http://fare-service:8080/
+      url: http://fare-service/
       sensitive-headers: 
     checkin-service:
       path: /checkin-service/**
